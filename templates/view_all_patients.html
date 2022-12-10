@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+
+  <div class="container">
+          <h1>All Patients Data</h1>
+      <hr>
+     <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Department For Treatment</th>
+      <th scope="col">Address</th>
+      <th scope="col">Email ID</th>
+      <th scope="col">Blood Group</th>
+
+    </tr>
+  </thead>
+         {% for pat in patients %}
+  <tbody>
+    <tr>
+      <th scope="row">{{pat.id}}</th>
+      <td>{{pat.firstname}}</td>
+      <td>{{pat.lastname}}</td>
+      <td>{{pat.phonenum}}</td>
+      <td>{{pat.treat_dept}}</td>
+      <td>{{pat.address}}</td>
+      <td>{{pat.emailid}}</td>
+      <td>{{pat.bloodgroup}}</td>
+
+    </tr>
+  </tbody>
+         {% endfor %}
+</table>
+
+  </div>
+  {% endblock body %}   
+
+

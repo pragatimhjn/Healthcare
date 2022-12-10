@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+          <h1>Filter Doctor Data</h1>
+      <hr>
+      <form action="/filter_doc" method="post">
+    {% csrf_token %}
+    <label for="name"> Name</label><br>
+    <input type="text" id="name" name="name" value="{{ name }}"><br>
+       
+    <label for="dept">Department</label><br>
+    <input type="text" id="dept" name="dept" value="{{ dept }}"><br>
+    <label for="role">Role</label><br>
+    <input type="text" id="role" name="role" value="{{ role }}"><br>
+    
+    <label for="loacation">Location</label><br>
+    <input type="text" id="location" name="location" value="{{ location }}"><br>
+    <hr>
+    <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+  </div> 
+
+
+
+
+  {% endblock body %}   

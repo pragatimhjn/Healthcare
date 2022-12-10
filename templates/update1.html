@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+  <div class="container">
+          <h1>Update Doctor Data</h1>
+      <hr>
+      <div class="dropdown">
+  <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Choose Doctor To Be Updated
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      {% for doctor in doctors %}
+    <li><a class="dropdown-item" href="/update/{{doctor.id}}">{{doctor.first_name}} {{doctor.last_name}}</a></li>
+      {% endfor %}
+  </ul>
+</div>
+  </div>
+  {% endblock body %}   
+

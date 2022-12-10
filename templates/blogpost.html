@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+<h1>Welcome To Heath Tips Blog</h1>
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        {% load static %}
+
+        <img class="w-100" src={% static "images/health.jpeg" %} alt="Image">
+
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title text-dark">{{blog.title}} </h2>
+          <p class="card-text">{{blog.content}}         </p>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock body %}   
+

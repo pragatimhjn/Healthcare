@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username"><br>
+    <input type="password" name="password" placeholder="password"><br>
+    <hr>
+    <hr>
+    <button type="submit" class="btn btn-dark">Submit</button>
+
+
+    {% comment %} <input type="submit" value="login"> {% endcomment %}
+    
+</form>
+
+{% for i in messages %}
+<h3>{{i}}</h3>
+{% endfor %}
+
+{% endblock body %}   

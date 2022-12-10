@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+  <div class="container">
+           <h1>Hospital Management System</h1>
+      <hr>
+      <a class="btn btn-dark" href="/register" role="button">Register Here</a>
+      <a class="btn btn-dark" href="/login" role="button">Login</a> <br><br><br>
+      <a class="btn btn-dark" href="/all_records" role="button">View All Doctors</a>
+      <a class="btn btn-dark" href="/add/" role="button">Add A Doctor</a>
+      <a class="btn btn-dark" href="/delete/" role="button">Remove A Doctor</a>
+      <a class="btn btn-dark" href="/update/" role="button">Update A Doctor</a>
+      <a class="btn btn-dark" href="/filter_doc" role="button">Filter Doctor Details</a><br><br><br>
+      <a class="btn btn-dark" href="/all_patient_records" role="button">View All Patients</a>
+      <a class="btn btn-dark" href="/addpatient/" role="button">Add A Patient</a>  <br><br><br>
+
+      <a class="btn btn-dark" href="/bloghome" role="button">Health Tips Blog</a>
+
+  </div>
+
+  {% endblock body %}   

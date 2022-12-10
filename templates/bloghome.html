@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+<h1>Welcome To Heath Tips Blog Home Page</h1>
+{% for blog in blogs %}
+
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        {% load static %}
+
+        <img class="w-100" src={% static "images/Healthy-Food.png" %} alt="Image">
+
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title text-dark"><a href="/blogpost/{{blog.slug}}" class="text-dark">{{blog.title}} </a></h2>
+          <p class="card-text">{{blog.content}}         </p>
+          <button type="button" class="btn btn-dark"><a href="/blogpost/{{blog.slug}}" >Read More</a></button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor%}
+
+{% endblock body %}   
+
